@@ -3,6 +3,9 @@
     padding: 0;
 }
 .background-box {
+    position: relative;
+    top: 0px;
+    left: 0px;
     overflow-y: hidden;
     overflow-x: scroll;
     -ms-overflow-style: none;  /* Internet Explorer 10+ */
@@ -38,9 +41,9 @@
 }
 
 .img-cloud {
-    position: relative;
-    top: -100vh;
-    left: 0;
+    position: absolute;
+    top: 0vh;
+    left: 0vh;
     height: 100vh;
     margin: auto;
     z-index: 3;
@@ -66,10 +69,34 @@
     z-index: 3;
     display: none;
 }
+
 .img-player {
     position: absolute;
     top: 0px;
     left: 0px;
     height: 100%;
+    margin: auto;
+}
+
+.intro_text {
+    position: absolute;
+    top: 20vh;
+    left: 5vmin;
+    max-width: 55vmin;
+    z-index: 2;
+    font-size: 2vmin;
+}
+
+.me-box {
+    position: absolute;
+    top: 10vh;
+    left: 65vmin;
+    max-width: 45vmin;
+    z-index: 2;
+}
+
+.image {
+    width: 100%;
+    height: auto;
     margin: auto;
 }
