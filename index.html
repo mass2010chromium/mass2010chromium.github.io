@@ -1,9 +1,30 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+            }
+            .imgbox {
+                display: grid;
+                height: 100%;
+            }
+            .background {
+                -ms-overflow-style: none;  /* Internet Explorer 10+ */
+                scrollbar-width: none;  /* Firefox */
+                height: 95vh;
+                margin: auto;
+            }
+            .background::-webkit-scrollbar { 
+                display: none;  /* Safari and Chrome */
+            }
+        </style>
         <title>Example</title>
     </head>
     <body>
-        <p>Some text!</p>
+        <div class="imgbox">
+            <img class="background" src='Background.png'>
+        </div>
     </body>
 </html>
