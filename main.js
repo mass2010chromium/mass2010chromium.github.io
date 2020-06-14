@@ -57,7 +57,7 @@ let arrowRight = false;
 let playerAutoMove = false;
 let playerTargetX = 0;
 
-window.addEventListener('keydown', (e) => {
+function keyDownHandler(e) {
     let captured = false;
     if (e.code === "ArrowUp") {
         arrowUp = true;
@@ -77,14 +77,18 @@ window.addEventListener('keydown', (e) => {
     }
     
     if (captured) e.preventDefault();
-});
+}
 
-window.addEventListener('keyup', (e) => {
+window.addEventListener('keydown', keyDownHandler);
+
+function keyUpHandler(e) {
     if (e.code === "ArrowUp")         arrowUp = false;
     else if (e.code === "ArrowDown")  arrowDown = false;
     else if (e.code === "ArrowLeft")  arrowLeft = false;
     else if (e.code === "ArrowRight") arrowRight = false;
-});
+}
+
+window.addEventListener('keyup', keyUpHandler);
 
 function playerOnScreen() {
     //return playerX > leftBorderX - imagePlayerWidthPx && playerX < leftBorderX + imageWidthPx;
