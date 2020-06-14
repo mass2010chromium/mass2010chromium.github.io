@@ -106,7 +106,7 @@
     max-width: 50vmin;
 }
 
-.image-box {
+.box-image {
     position: absolute;
     top: 10vh;
     left: 55vmin;
@@ -138,4 +138,19 @@ li {
     left: 55vmin;
     max-width: 65vmin;
     z-index: 5;
+}
+
+.text-last {
+    position: absolute;
+    top: 22vh;
+    left: 35vh;
+    max-width: 50vmin;
+}
+
+.box-image-last {
+    position: absolute;
+    top: 10vh;
+    left: 85vmin;
+    max-width: 45vmin;
+    z-index: 3;
 }
