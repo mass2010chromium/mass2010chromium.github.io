@@ -79,13 +79,13 @@
 }
 
 [class*="text-"] {
-    z-index: 3;
+    z-index: 5;
     font-size: 2.25vmin;
     font-family: "Lucida Console", Courier, monospace;
 }
 
 .boxes {
-    width: 400vh;
+    width: 600vh;
     display: flex;
     flex-direction: row;
     justify-content: left;
@@ -116,6 +116,7 @@
 
 .image {
     width: 100%;
+    max-width: 100%;
     height: auto;
     margin: auto;
 }
@@ -125,9 +126,16 @@
     top: 22vh;
     left: 5vh;
     max-width: 50vmin;
-    z-index: 3;
 }
 
 li {
     margin: 10px 0;
+}
+
+.video-box {
+    position: absolute;
+    top: 10vh;
+    left: 55vmin;
+    max-width: 65vmin;
+    z-index: 5;
 }
