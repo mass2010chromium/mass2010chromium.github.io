@@ -142,7 +142,12 @@ function loop() {
     let scrollCurrent = scrolling_background.scrollLeft;
     let scrollDelta = (scrollTarget - scrollCurrent) * 0.3;
     anticipated_scroll = scrollCurrent + scrollDelta;
-    scrolling_background.scrollBy(scrollDelta, 0);
+    if (scrolling_background.scrollBy) {
+        scrolling_background.scrollBy(scrollDelta, 0);
+    }
+    else {
+        scrolling_background.scrollTo(scrollCurrent+scrollDelta, 0);
+    }
     // console.log(playerX)
     updatePlayerOnScreen();
 }
