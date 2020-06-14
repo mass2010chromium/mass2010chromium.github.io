@@ -2,20 +2,45 @@
 <html scroll-behavior="smooth">
     <head>
         <link rel="stylesheet" href="styles.css">
+        <link rel="icon" href="favicon.png">
         <link rel="manifest" href="manifest.json">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-        <title>Example</title>
+        <title>About me</title>
     </head>
     <body onresize="resize_handle()">
         <div class="background-box" id='scrollables' onscroll="scroll_handle()">
             <img class="img-background" src='Background.png' id='background'>
             <img class="img-cloud" src='Clouds.png' id='clouds'>
-            <div class="intro_text">
-                <h1>Hi! My name is Jing-Chen.</h1>
-                <h2>Hi! My name is Jing-Chen.</h2>
-            </div>
-            <div class="me-box">
-                <img class=image src='Me.png' id='clouds'>
+            
+            <div class="boxes">
+                <div class="horizontal-box">
+                    <div class="text-intro">
+                        <h1>Hi! My name is Jing-Chen.</h1>
+                        <br><br>
+                        <h2>I like to make things, with code or with my hands.</h2>
+                        <br><br>
+                        <h3>Arrow keys or scroll right -></h3>
+                    </div>
+                    <div class="image-box">
+                        <img class=image src='Me.png' id='clouds'>
+                    </div>
+                </div>
+    
+                <div class="horizontal-box">
+                    <div class="text-about">
+                        <h2>About me:</h2>
+                        <br>
+                        <ul>
+                            <li>I was born in Taiwan and grew up in California.</li>
+                            <li>I am currently a sophomore at UIUC, studying Mechanical Engineering with a minor in CS.</li>
+                            <li>I participated in First Robotics in high school with team 846, The Funky Monkeys.</li>
+                            <li>I like monospaced fonts. What gives?</li>
+                        </ul>
+                    </div>
+                    <div class="image-box">
+                        <img class=image src='Robot.png' id='clouds'>
+                    </div>
+                </div>
             </div>
         </div>
         <div class="sun-box">
