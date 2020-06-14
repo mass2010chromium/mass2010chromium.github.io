@@ -146,7 +146,7 @@ function loop() {
         scrolling_background.scrollBy(scrollDelta, 0);
     }
     else {
-        scrolling_background.scrollTo(scrollCurrent+scrollDelta, 0);
+        scrolling_background.scrollLeft = scrollCurrent+scrollDelta;
     }
     // console.log(playerX)
     updatePlayerOnScreen();
