@@ -59,19 +59,23 @@ let playerTargetX = 0;
 
 function keyDownHandler(e) {
     let captured = false;
-    if (e.code === "ArrowUp") {
+    // if (e.code === "ArrowUp") {
+    if (e.keyCode === 38) {
         arrowUp = true;
         captured = true;
     }
-    else if (e.code === "ArrowDown") {
+    // else if (e.code === "ArrowDown") {
+    else if (e.keyCode === 40) {
         arrowDown = true;
         captured = true;
     }
-    else if (e.code === "ArrowLeft") {
+    // else if (e.code === "ArrowLeft") {
+    else if (e.keyCode === 37) {
         arrowLeft = true;
         captured = true;
     }
-    else if (e.code === "ArrowRight") {
+    // else if (e.code === "ArrowRight") {
+    else if (e.keyCode === 39) {
         arrowRight = true;
         captured = true;
     }
@@ -82,10 +86,14 @@ function keyDownHandler(e) {
 window.addEventListener('keydown', keyDownHandler);
 
 function keyUpHandler(e) {
-    if (e.code === "ArrowUp")         arrowUp = false;
-    else if (e.code === "ArrowDown")  arrowDown = false;
-    else if (e.code === "ArrowLeft")  arrowLeft = false;
-    else if (e.code === "ArrowRight") arrowRight = false;
+    // if (e.code === "ArrowUp")         arrowUp = false;
+    // else if (e.code === "ArrowDown")  arrowDown = false;
+    // else if (e.code === "ArrowLeft")  arrowLeft = false;
+    // else if (e.code === "ArrowRight") arrowRight = false;
+    if (e.keyCode === 38)      arrowUp = false;
+    else if (e.keyCode === 40) arrowDown = false;
+    else if (e.keyCode === 37) arrowLeft = false;
+    else if (e.keyCode === 39) arrowRight = false;
 }
 
 window.addEventListener('keyup', keyUpHandler);
