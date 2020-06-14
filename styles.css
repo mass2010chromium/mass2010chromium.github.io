@@ -31,6 +31,8 @@
     top: 0;
     left: 0;
     height: 100vh;
+    width: auto;
+    display: block;
     margin: auto;
     z-index: 1;
 }
@@ -59,11 +61,15 @@
 .player-box {
     position:absolute;
     top: 90vh;
-    left: 0;
+    left: 0px;
     height: 3.5vh; /* 14px player height / 400px image height */
     z-index: 3;
+    display: none;
 }
 .img-player {
+    position: absolute;
+    top: 0px;
+    left: 0px;
     height: 100%;
     margin: auto;
 }
