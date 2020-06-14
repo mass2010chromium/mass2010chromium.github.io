@@ -19,6 +19,7 @@ function resize_handle() {
     imageWidthPx = windowWidth / scaling;
     // console.log(scaling)
     updatePlayerOnScreen();
+    setAutomove();
 }
 
 let moving = false;
@@ -27,18 +28,22 @@ function scroll_handle() {
     if (!moving && Math.abs(anticipated_scroll - scrolling_background.scrollLeft) > 1) {
         // console.log("automove");
         leftBorderX = scrolling_background.scrollLeft / scaling;
-        if (playerX - leftBorderX < playerSideBuffer) {
-            /* Within playerSideBuffer of left border. */
-            playerAutoMove = true;
-            playerTargetX = leftBorderX + 2*playerSideBuffer;
-        }
-        else if (leftBorderX + imageWidthPx - playerX - imagePlayerWidthPx < playerSideBuffer) {
-            /* Within playerSideBuffer of right border. imageWidthPx is width of screen in image pixels. */
-            playerAutoMove = true;
-            playerTargetX = leftBorderX + imageWidthPx - 2*playerSideBuffer - imagePlayerWidthPx;
-        }
+        setAutomove();
     }
     updatePlayerOnScreen();
+}
+
+function setAutomove() {
+    if (playerX - leftBorderX < playerSideBuffer) {
+        /* Within playerSideBuffer of left border. */
+        playerAutoMove = true;
+        playerTargetX = leftBorderX + 2*playerSideBuffer;
+    }
+    else if (leftBorderX + imageWidthPx - playerX - imagePlayerWidthPx < playerSideBuffer) {
+        /* Within playerSideBuffer of right border. imageWidthPx is width of screen in image pixels. */
+        playerAutoMove = true;
+        playerTargetX = leftBorderX + imageWidthPx - 2*playerSideBuffer - imagePlayerWidthPx;
+    }
 }
 
 let player_box = document.getElementById('player');
