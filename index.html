@@ -2,83 +2,47 @@
 <html scroll-behavior="smooth">
     <head>
         <link rel="stylesheet" href="styles.css">
-        <link rel="icon" href="favicon.png">
-        <link rel="manifest" href="manifest.json">
-        <title>About me</title>
+        <link rel="icon" href="about/favicon.png">
+        <link rel="manifest" href="about/manifest.json">
+        <title>/dev/</title>
     </head>
-    <body onresize="rh()">
-    <!-- resize_handle() -->
-        <div class="background-box" id='scrollables' onscroll="scroll_handle()">
-            <img class="img-background" src='Background.webp' id='background'>
-            <img class="img-cloud" src='Clouds.webp' id='clouds'>
-            
-            <div class="boxes">
-                <div class="horizontal-box">
-                    <div class="text-intro">
-                        <h1>Hi! My name is Jing-Chen.</h1>
-                        <br><br>
-                        <h2>I like to make things, with code or with my hands.</h2>
-                        <br>
-                        <p>Arrow keys or scroll right -></p>
-                        <p>Works better in landscape view.</p>
-                    </div>
-                    <div class="box-image">
-                        <img class=image src='Me.webp'>
-                    </div>
-                </div>
-    
-                <div class="horizontal-box">
-                    <div class="text-about">
-                        <h2>About me:</h2>
-                        <br>
-                        <ul>
-                            <li>I was born in Taiwan and grew up in California.</li>
-                            <li>I am currently a junior at UIUC, double majoring in CS and Mechanical Engineering.</li>
-                            <li>I participated in First Robotics in high school with team 846, The Funky Monkeys.</li>
-                            <li>I like monospaced fonts. What gives?</li>
-                        </ul>
-                    </div>
-                    <div class="box-image">
-                        <img class=image src='Robot-small.webp'>
-                    </div>
-                </div>
-    
-                <div class="horizontal-box">
-                    <div class="text-about">
-                        <h2>Interests:</h2>
-                        <br>
-                        <ul>
-                            <li>Robotics and pathfinding. See <a href="anya.pdf" download>this</a> cool paper! (not by me)</li>
-                            <li>Computer games. I like playing them, as well as making them.</li>
-                            <li>Pixel art. I like to mess around in paint.net.</li>
-                            <li>Learning! Reading research papers can be fun and enlightening.</li>
-                            <li>Webcomics. Currently following Gunnerkrigg Court, among others.</li>
-                        </ul>
-                    </div>
-                    <video class="video-box" autoplay muted loop>
-                        <source src="movie-compress.mp4" type="video/mp4">
-                        <source src="movie-compress.ogg" type="video/ogg">
-                        Your browser doesn't support this.
-                    </video>
-                </div>
-                <div class="horizontal-box">
-                    <div class="text-last">
-                        <h2>Turtles!</h2>
-                        <br><br>
-                        <p>And tortoises of course.</p>
-                    </div>
-                    <div class="box-image-last">
-                        <img class=image src='Meech.webp'>
-                    </div>
-                </div>
+    <body text="#ffffff" link="#f0c0c0" vlink="#f0c0c0" style="background-color:#08080A;">
+        <div class="text-center">
+            <h1 style="padding:20vmin;">/dev/</h1>
+        </div>
+        <div class="text-center" style="padding:5vmin">
+            <div class="column">
+                <a href="/about/index.html">tty</a>
+            </div>
+            <div class="column">
+                <a href="https://github.com/mass2010chromium">github</a><br><br>
+                <a href="/about/Jing-Chen_Resume__CS_2020_09_01.pdf">resume</a><br><br>
+                <a href="https://www.linkedin.com/in/jing-chen-peng-711710169/">linkedin</a><br><br>
+                <a id="mailclick">email (click me)</a><br><br>
+                <script>
+                    let table1 = "!\"#$%&'()*+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\\]^_abcdefghijklmnopqrstuvwxyz{|}";
+                    let table2 = "X)tRaqxb79:/5ZzA2Sl^|{Wn-wpH=\"O_3CQP]'o,kvr1h&c!ifNE?m$%[}<V*gU6>Kdy0Ie4T8YFG@;(DjMJusLB\\#.+";
+                    var value = '-kp!BM/#iMl?{"skQl';
+                    var text = "email (click"
+                    function d(input) {
+                        var output = "";
+                        for (let i = 0; i < input.length; ++i) {
+                            output += table2.charAt(table1.indexOf(input[i]));
+                        }
+                        return output;
+                    }
+                    function mail() {
+                        value = d(value);
+                        text += "k";
+                        document.getElementById("mail").innerHTML = value;
+                        document.getElementById("mailclick").innerHTML = text + " me)";
+                    }
+                    
+                    let mail_button = document.getElementById("mailclick");
+                    mail_button.addEventListener("click", mail);
+                </script>
+                <a id="mail"></a>
             </div>
         </div>
-        <div class="sun-box">
-            <img class="img-sun" src='Sun.webp'>
-        </div>
-        <div class="player-box" id='player'>
-            <img class="img-player" src='Player.webp'>
-        </div>
-        <script src="main.js"></script>
     </body>
 </html>

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html scroll-behavior="smooth">
+    <head>
+        <link rel="stylesheet" href="styles.css">
+        <link rel="icon" href="favicon.png">
+        <link rel="manifest" href="manifest.json">
+        <title>About me</title>
+    </head>
+    <body onresize="rh()">
+    <!-- resize_handle() -->
+        <div class="background-box" id='scrollables' onscroll="scroll_handle()">
+            <img class="img-background" src='Background.webp' id='background'>
+            <img class="img-cloud" src='Clouds.webp' id='clouds'>
+            
+            <div class="boxes">
+                <div class="horizontal-box">
+                    <div class="text-intro">
+                        <h1>Hi! My name is Jing-Chen.</h1>
+                        <br><br>
+                        <h2>I like to make things, with code or with my hands.</h2>
+                        <br>
+                        <p>Arrow keys or scroll right -></p>
+                        <p>Works better in landscape view.</p>
+                    </div>
+                    <div class="box-image">
+                        <img class=image src='Me.webp'>
+                    </div>
+                </div>
+    
+                <div class="horizontal-box">
+                    <div class="text-about">
+                        <h2>About me:</h2>
+                        <br>
+                        <ul>
+                            <li>I was born in Taiwan and grew up in California.</li>
+                            <li>I am currently a junior at UIUC, double majoring in CS and Mechanical Engineering.</li>
+                            <li>I participated in First Robotics in high school with team 846, The Funky Monkeys.</li>
+                            <li>I like monospaced fonts. What gives?</li>
+                        </ul>
+                    </div>
+                    <div class="box-image">
+                        <img class=image src='Robot-small.webp'>
+                    </div>
+                </div>
+    
+                <div class="horizontal-box">
+                    <div class="text-about">
+                        <h2>Interests:</h2>
+                        <br>
+                        <ul>
+                            <li>Robotics and pathfinding. See <a href="anya.pdf" download>this</a> cool paper! (not by me)</li>
+                            <li>Computer games. I like playing them, as well as making them.</li>
+                            <li>Pixel art. I like to mess around in paint.net.</li>
+                            <li>Learning! Reading research papers can be fun and enlightening.</li>
+                            <li>Webcomics. Currently following Gunnerkrigg Court, among others.</li>
+                        </ul>
+                    </div>
+                    <video class="video-box" autoplay muted loop>
+                        <source src="movie-compress.mp4" type="video/mp4">
+                        <source src="movie-compress.ogg" type="video/ogg">
+                        Your browser doesn't support this.
+                    </video>
+                </div>
+                <div class="horizontal-box">
+                    <div class="text-last">
+                        <h2>Turtles!</h2>
+                        <br><br>
+                        <p>And tortoises of course.</p>
+                    </div>
+                    <div class="box-image-last">
+                        <img class=image src='Meech.webp'>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="sun-box">
+            <img class="img-sun" src='Sun.webp'>
+        </div>
+        <div class="player-box" id='player'>
+            <img class="img-player" src='Player.webp'>
+        </div>
+        <script src="main.js"></script>
+    </body>
+</html>
