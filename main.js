@@ -1,9 +1,13 @@
-let windowHeight = $(window).height();
-let windowWidth = $(window).width();
+let windowHeight = window.innerHeight
+        || document.documentElement.clientHeight
+        || document.body.clientHeight;
+let windowWidth = window.innerWidth
+        || document.documentElement.clientWidth
+        || document.body.clientWidth;
 // console.log(windowHeight + ", " + windowWidth);
 
 let imageHeightPx = 400;
-let scaling = windowHeight / imageHeightPx;
+let scaling = windowHeight / imageHeightPx; 
 let imageWidthPx = windowWidth / scaling;
 
 let imagePlayerWidthPx = 7;
