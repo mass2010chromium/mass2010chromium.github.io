@@ -19,12 +19,13 @@
                 <a href="https://github.com/mass2010chromium">github</a><br><br>
                 <a href="/Jing-Chen_Resume__CS_2020_09_01.pdf">resume</a><br><br>
                 <a href="https://www.linkedin.com/in/jing-chen-peng-711710169/">linkedin</a><br><br>
-                <a id="mailclick">email (click me)</a><br><br>
+                <a id="mailclick">email (click me 3 times)</a><br><br>
                 <script>
                     let table1 = "!\"#$%&'()*+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\\]^_abcdefghijklmnopqrstuvwxyz{|} ";
                     let table2 = "X)tRaqxb7 9:/5ZzA2Sl^|{Wn-wpH=\"O_3CQP]'o,kvr1h&c!ifNE?m$%[}<V*gU6>Kdy0Ie4T8YFG@;(DjMJusLB\\#.+";
-                    var value = "5555555555|U{$ 12#\\1lmXtZU>l5555555555";
-                    var text = "email (click"
+                    var value = "|U{$ 12#\\1lmXtZU>l";
+                    var text = "email (click";
+                    var n = 3;
                     function d(input) {
                         var output = "";
                         for (let i = 0; i < input.length; ++i) {
@@ -35,8 +36,9 @@
                     function mail() {
                         value = d(value);
                         text += "k";
+                        n -= 1;
                         document.getElementById("mail").innerHTML = value;
-                        document.getElementById("mailclick").innerHTML = text + " me)";
+                        document.getElementById("mailclick").innerHTML = text + " me " + n + " times)";
                     }
                     
                     let mail_button = document.getElementById("mailclick");
